@@ -1,6 +1,6 @@
 package sistema.saludador.modelo;
 
-public enum PeriodoDia {
+public enum PeriodoDia { //enum: enumeracion 
     AM("AM"),
     PM("PM");
 

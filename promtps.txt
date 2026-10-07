@@ -1,0 +1,42 @@
+# Java greeting app
+_Exported on 10/5/2026 at 22:12:14 GMT-5 from Cursor (3.23.12)_
+
+---
+
+**User**
+
+necesito un programa en java, el modelo de requerimientos es el de la foto, el programa solicitar saludo posibilita que el estudiante sea saludado por su nombre, mencionando su edad. 1. el estudiante hace clic en solicitar saludor 2. el sistema solicita nombre, edad, hora (AM/PM) 3. El estudiante ingresa lo solicitado 4. El sistema saluda al estudiante por su nombre y menciona su edad. Una app de escritorio
+
+---
+
+**Cursor**
+
+Voy a revisar la foto de requerimientos y el proyecto para implementar la app de escritorio en Java.
+
+El diagrama es un caso de uso: el estudiante solicita saludo y el sistema incluye pedir datos. Voy a armar una app de escritorio en Java (Swing) con ese flujo.
+
+La app de escritorio ya está lista y compilada. Se abrió en tu máquina: **Sistema Saludador**.
+
+Sigue el caso de uso de la foto:
+
+1. El estudiante hace clic en **Solicitar saludo**.
+2. El sistema pide **nombre**, **edad** y **hora (AM/PM)** — el include *Pedir datos*.
+3. El estudiante ingresa esos datos.
+4. El sistema saluda por nombre, usa AM/PM (`Buenos días` / `Buenas tardes`) y menciona la edad.
+
+Ejemplo: `Buenos días, Ana. Tienes 21 años.`
+
+Estructura:
+
+- `modelo`: datos del estudiante y AM/PM  
+- `servicio`: arma el saludo  
+- `vista`: ventana Swing  
+- `SistemaSaludadorApp`: punto de entrada  
+
+Para volver a ejecutarla:
+
+```powershell
+javac -encoding UTF-8 -d out src/sistema/saludador/modelo/*.java src/sistema/saludador/servicio/*.java src/sistema/saludador/vista/*.java src/sistema/saludador/SistemaSaludadorApp.java
+java -cp out sistema.saludador.SistemaSaludadorApp
+```
+

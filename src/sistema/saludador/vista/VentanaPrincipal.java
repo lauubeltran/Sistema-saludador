@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
@@ -241,20 +242,32 @@ public class VentanaPrincipal extends JFrame {
 
     private JButton crearBotonPrincipal(String texto) {
         JButton boton = new JButton(texto);
+        boton.setUI(new BasicButtonUI());
         boton.setAlignmentX(Component.CENTER_ALIGNMENT);
         boton.setFont(new Font("Segoe UI", Font.BOLD, 14));
         boton.setBackground(new Color(25, 118, 210));
         boton.setForeground(Color.WHITE);
+        boton.setOpaque(true);
+        boton.setContentAreaFilled(true);
         boton.setFocusPainted(false);
+        boton.setBorder(BorderFactory.createEmptyBorder(10, 18, 10, 18));
         boton.setPreferredSize(new Dimension(200, 40));
         return boton;
     }
 
     private JButton crearBotonSecundario(String texto) {
         JButton boton = new JButton(texto);
+        boton.setUI(new BasicButtonUI());
         boton.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-        boton.setPreferredSize(new Dimension(140, 40));
+        boton.setBackground(new Color(232, 236, 241));
+        boton.setForeground(new Color(33, 37, 41));
+        boton.setOpaque(true);
+        boton.setContentAreaFilled(true);
         boton.setFocusPainted(false);
+        boton.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(180, 186, 194)),
+                BorderFactory.createEmptyBorder(8, 16, 8, 16)));
+        boton.setPreferredSize(new Dimension(140, 40));
         return boton;
     }
 }
